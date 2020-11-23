@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipes Search</title>
+    <link rel="stylesheet" href="/assets//css/variables.css" />
+    <link rel="stylesheet" href="/assets/css/normalize.css" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="sidebar-open-btn">
+        <div class="sidebar-open-btn-line"></div>
+        <div class="sidebar-open-btn-line"></div>
+        <div class="sidebar-open-btn-line"></div>
+      </div>
+      <h1 class="header-text">RECIPE SEARCHER</h1>
+      <svg
+        class="more-btn"
+        xmlns="http://www.w3.org/2000/svg"
+        width="3"
+        height="15"
+        viewBox="0 0 3 15"
+      >
+        <g>
+          <circle cx="1.5" cy="1.5" r="1.5" fill="#2699fb" />
+          <circle
+            cx="1.5"
+            cy="1.5"
+            r="1.5"
+            transform="translate(0 6)"
+            fill="#2699fb"
+          />
+          <circle
+            cx="1.5"
+            cy="1.5"
+            r="1.5"
+            transform="translate(0 12)"
+            fill="#2699fb"
+          />
+        </g>
+      </svg>
+    </header>
+    <main class="main">
+      <aside class="sidebar">
+        <div class="sidebar-close-btn">
+          <div class="sidebar-close-btn-line line-1"></div>
+          <div class="sidebar-close-btn-line line-2"></div>
+        </div>
+        <ul class="sidebar-items">
+          <li class="sidebar-item">
+            <a class="sidebar-item-text" href="#search-1">SEARCH</a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-item-text" href="#recipes">RECIPES</a>
+          </li>
+          <!-- <li class="sidebar-item">
+            <a class="sidebar-item-text" href="#tags">TAGS</a>
+          </li>
+          <li class="sidebar-item">
+            <a class="sidebar-item-text" href="#ingredients">INGREDIENTS</a>
+          </li> -->
+        </ul>
+      </aside>
+      <content id="search-1" class="page">
+        <div class="search-1-form">
+          <h1 class="form-heading">SEARCH</h1>
+          <div class="input-area">
+            <input
+              type="text"
+              class="text-input"
+              autocomplete="off"
+              name="name"
+              placeholder="Name"
+            />
+            <input
+              type="text"
+              class="text-input"
+              autocomplete="off"
+              name="description"
+              placeholder="Description"
+            />
+            <input
+              type="text"
+              class="text-input"
+              autocomplete="off"
+              name="tags"
+              placeholder="Tags"
+            />
+            <p class="guide-text">
+              If you don't have any idea,<br />you just click next
+            </p>
+          </div>
+        </div>
+        <a class="next-btn" href="#search-2">NEXT</a>
+      </content>
+      <content id="search-2" class="page">
+        <div class="search-2-form">
+          <div class="search-2-form-header">
+            <a class="go-back-btn" href="#search-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+              >
+                <g transform="translate(-26 -36)">
+                  <g>
+                    <g transform="translate(26 36)">
+                      <path
+                        d="M8,0,6.545,1.455l5.506,5.506H0V9.039H12.052L6.545,14.545,8,16l8-8Z"
+                        transform="translate(16 16) rotate(180)"
+                        fill="#2699fb"
+                      />
+                    </g>
+                  </g>
+                </g>
+              </svg>
+            </a>
+          </div>
+          <div class="time-range-input-area">
+            <h1 class="input-heading">TIME RANGE</h1>
+            <div class="time-range-input-wrapper">
+              <input
+                type="range"
+                name="timeRange"
+                class="time-range-input"
+                min="1"
+                max="150"
+              />
+            </div>
+          </div>
+          <div class="ingredient-input-area">
+            <h1 class="input-heading">INGREDIENTS</h1>
+            <input
+              type="text"
+              class="text-input ingredient-input"
+              name="name"
+              placeholder="Name"
+              autocomplete="off"
+            />
+          </div>
+          <ul class="ingredient-candidates-list"></ul>
+          <ul class="ingredient-selected-list">
+            <li class="ingredient-selected-list-item">
+              <span>EGG</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+              >
+                <rect width="16" height="16" fill="none" />
+                <path
+                  d="M15.9,14.5l-3.3-3.3A6.847,6.847,0,0,0,14,7,6.957,6.957,0,0,0,7,0,6.957,6.957,0,0,0,0,7a6.957,6.957,0,0,0,7,7,6.847,6.847,0,0,0,4.2-1.4l3.3,3.3ZM2,7A4.951,4.951,0,0,1,7,2a4.951,4.951,0,0,1,5,5,4.951,4.951,0,0,1-5,5A4.951,4.951,0,0,1,2,7Z"
+                  fill="#2699fb"
+                />
+              </svg>
+            </li>
+            <li class="ingredient-selected-list-item">
+              <span>EGG</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+              >
+                <rect width="16" height="16" fill="none" />
+                <path
+                  d="M15.9,14.5l-3.3-3.3A6.847,6.847,0,0,0,14,7,6.957,6.957,0,0,0,7,0,6.957,6.957,0,0,0,0,7a6.957,6.957,0,0,0,7,7,6.847,6.847,0,0,0,4.2-1.4l3.3,3.3ZM2,7A4.951,4.951,0,0,1,7,2a4.951,4.951,0,0,1,5,5,4.951,4.951,0,0,1-5,5A4.951,4.951,0,0,1,2,7Z"
+                  fill="#2699fb"
+                />
+              </svg>
+            </li>
+            <li class="ingredient-selected-list-item">
+              <span>EGG</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+              >
+                <rect width="16" height="16" fill="none" />
+                <path
+                  d="M15.9,14.5l-3.3-3.3A6.847,6.847,0,0,0,14,7,6.957,6.957,0,0,0,7,0,6.957,6.957,0,0,0,0,7a6.957,6.957,0,0,0,7,7,6.847,6.847,0,0,0,4.2-1.4l3.3,3.3ZM2,7A4.951,4.951,0,0,1,7,2a4.951,4.951,0,0,1,5,5,4.951,4.951,0,0,1-5,5A4.951,4.951,0,0,1,2,7Z"
+                  fill="#2699fb"
+                />
+              </svg>
+            </li>
+          </ul>
+          <a class="next-btn" href="#search-2">START</a>
+        </div>
+      </content>
+      <content id="search-3" class="page"> </content>
+      <content id="recipes" class="page">
+        <ul class="recipe-list">
+          <a href="#recipe-detail"
+            ><li class="recipe-list-item">
+              <div class="recipe-list-item-text">
+                <p class="recipe-name">Egg Omrice with boild cheeze</p>
+                <p class="recipe-time">90 min</p>
+              </div>
+              <img
+                class="recipe-list-item-thumnail"
+                src="/assets/images/recipe.jpg"
+                alt=""
+              />
+            </li>
+          </a>
+          <a href="#recipe-detail"
+            ><li class="recipe-list-item">
+              <div class="recipe-list-item-text">
+                <p class="recipe-name">Egg Omrice with boild cheeze</p>
+                <p class="recipe-time">90 min</p>
+              </div>
+              <img
+                class="recipe-list-item-thumnail"
+                src="/assets/images/recipe.jpg"
+                alt=""
+              />
+            </li>
+          </a>
+          <a href="#recipe-detail"
+            ><li class="recipe-list-item">
+              <div class="recipe-list-item-text">
+                <p class="recipe-name">Egg Omrice with boild cheeze</p>
+                <p class="recipe-time">90 min</p>
+              </div>
+              <img
+                class="recipe-list-item-thumnail"
+                src="/assets/images/recipe.jpg"
+                alt=""
+              />
+            </li>
+          </a>
+          <a href="#recipe-detail"
+            ><li class="recipe-list-item">
+              <div class="recipe-list-item-text">
+                <p class="recipe-name">Egg Omrice with boild cheeze</p>
+                <p class="recipe-time">90 min</p>
+              </div>
+              <img
+                class="recipe-list-item-thumnail"
+                src="/assets/images/recipe.jpg"
+                alt=""
+              />
+            </li>
+          </a>
+          <a href="#recipe-detail"
+            ><li class="recipe-list-item">
+              <div class="recipe-list-item-text">
+                <p class="recipe-name">Egg Omrice with boild cheeze</p>
+                <p class="recipe-time">90 min</p>
+              </div>
+              <img
+                class="recipe-list-item-thumnail"
+                src="/assets/images/recipe.jpg"
+                alt=""
+              />
+            </li>
+          </a>
+        </ul>
+        <div class="pagination">
+          <a href="#recipes#1" class="pagination-item"></a>
+          <a href="#recipes#2" class="pagination-item"></a>
+          <a href="#recipes#3" class="pagination-item"></a>
+          <a href="#recipes#4" class="pagination-item"></a>
+        </div>
+      </content>
+      <!-- <content id="ingredients" class="page"> </content>
+      <content id="tags" class="page"> </content> -->
+    </main>
+    <script src="/assets/js/main.js" type="module"></script>
+  </body>
+</html>
