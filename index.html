@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/assets//css/variables.css" />
     <link rel="stylesheet" href="/assets/css/normalize.css" />
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/media-queries.css">
   </head>
   <body>
     <header class="header">
@@ -42,28 +43,28 @@
         </g>
       </svg>
     </header>
+    <aside class="sidebar">
+      <div class="sidebar-close-btn">
+        <div class="sidebar-close-btn-line line-1"></div>
+        <div class="sidebar-close-btn-line line-2"></div>
+      </div>
+      <ul class="sidebar-items">
+        <li class="sidebar-item">
+          <a class="sidebar-item-text" href="#">SEARCH</a>
+        </li>
+        <li class="sidebar-item">
+          <a class="sidebar-item-text" href="#">RECIPES</a>
+        </li>
+        <!-- <li class="sidebar-item">
+          <a class="sidebar-item-text" href="#tags">TAGS</a>
+        </li>
+        <li class="sidebar-item">
+          <a class="sidebar-item-text" href="#ingredients">INGREDIENTS</a>
+        </li> -->
+      </ul>
+    </aside>
     <main class="main">
-      <aside class="sidebar">
-        <div class="sidebar-close-btn">
-          <div class="sidebar-close-btn-line line-1"></div>
-          <div class="sidebar-close-btn-line line-2"></div>
-        </div>
-        <ul class="sidebar-items">
-          <li class="sidebar-item">
-            <a class="sidebar-item-text" href="#search-1">SEARCH</a>
-          </li>
-          <li class="sidebar-item">
-            <a class="sidebar-item-text" href="#recipes">RECIPES</a>
-          </li>
-          <!-- <li class="sidebar-item">
-            <a class="sidebar-item-text" href="#tags">TAGS</a>
-          </li>
-          <li class="sidebar-item">
-            <a class="sidebar-item-text" href="#ingredients">INGREDIENTS</a>
-          </li> -->
-        </ul>
-      </aside>
-      <content id="search-1" class="page">
+      <content id="search" class="page">
         <div class="search-1-form">
           <h1 class="form-heading">SEARCH</h1>
           <div class="input-area">
@@ -93,12 +94,12 @@
             </p>
           </div>
         </div>
-        <a class="next-btn" href="#search-2">NEXT</a>
+        <a class="next-btn" href="#">NEXT</a>
       </content>
-      <content id="search-2" class="page">
+      <content id="search-detail" class="page">
         <div class="search-2-form">
           <div class="search-2-form-header">
-            <a class="go-back-btn" href="#search-1">
+            <a class="go-back-btn" href="#">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -120,7 +121,10 @@
             </a>
           </div>
           <div class="time-range-input-area">
-            <h1 class="input-heading">TIME RANGE</h1>
+            <div class="time-range-input-area-header">
+              <h1 class="input-heading no-margin">TIME RANGE</h1>
+              <span class="time-range-input-value">75 min</span>
+            </div>
             <div class="time-range-input-wrapper">
               <input
                 type="range"
@@ -129,6 +133,7 @@
                 min="1"
                 max="150"
               />
+              <div class="time-range-input-trackbar"></div>
             </div>
           </div>
           <div class="ingredient-input-area">
@@ -189,10 +194,10 @@
               </svg>
             </li>
           </ul>
-          <a class="next-btn" href="#search-2">START</a>
+          <a class="next-btn" href="#">START</a>
         </div>
       </content>
-      <content id="search-3" class="page"> </content>
+      <!-- <content id="search-3" class="page"> </content> -->
       <content id="recipes" class="page">
         <ul class="recipe-list">
           <a href="#recipe-detail"
@@ -261,12 +266,12 @@
             </li>
           </a>
         </ul>
-        <div class="pagination">
+        <!-- <div class="pagination">
           <a href="#recipes#1" class="pagination-item"></a>
           <a href="#recipes#2" class="pagination-item"></a>
           <a href="#recipes#3" class="pagination-item"></a>
           <a href="#recipes#4" class="pagination-item"></a>
-        </div>
+        </div> -->
       </content>
       <!-- <content id="ingredients" class="page"> </content>
       <content id="tags" class="page"> </content> -->
