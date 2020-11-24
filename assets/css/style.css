@@ -13,10 +13,10 @@ body {
   background-color: var(--tertiary-color);
 }
 
-.header-text {
+/* .header-text {
   font-size: 18px;
   color: var(--primary-color);
-}
+} */
 
 .more-btn {
   width: 10px;
@@ -26,7 +26,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 70px;
+  padding: 0px 20px 0px 20px;
+  margin-top: 70px;
   width: 100%;
   height: 100%;
 }
@@ -243,7 +244,7 @@ body {
 .time-range-input-trackbar {
   content: "";
   position: absolute;
-  top: 14px;
+  top: 12px;
   width: 100%;
   height: 3px;
   background-color: var(--primary-color);
@@ -259,15 +260,6 @@ body {
   height: 18px;
   background-color: var(--light);
   border: 3.5px solid var(--primary-color);
-}
-
-
-.ingredient-input-area {
-
-}
-
-.ingredient-input {
-
 }
 
 .ingredient-selected-list {
@@ -290,9 +282,6 @@ body {
   display: flex;
   flex-direction: column;
   padding: 5px 24px 24px 24px;
-}
-
-.recipe-list {
 }
 
 .recipe-list-item {
@@ -350,10 +339,6 @@ body {
 .pagination-item:focus, .pagination-item:focus {
   background-color: var(--primary-color);
 }
-
-
-
-
 
 /* PAGES */
 #search, #search-detail {

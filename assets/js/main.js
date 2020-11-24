@@ -14,34 +14,31 @@ let sidebarX = -260;
 
 // SEARCH 1 INPUTS
 const search1Inputs = document.querySelectorAll('#search .text-input');
-const nextBtn = document.querySelector('#search .next-btn');
-const goBackBtn = document.querySelector('#search-detail .go-back-btn');
-const searchStartBtn = document.querySelector('#search-detail .next-btn');
+// const nextBtn = document.querySelector('#search .next-btn');
+// const goBackBtn = document.querySelector('#search-detail .go-back-btn');
+// const searchStartBtn = document.querySelector('#search-detail .next-btn');
 
-nextBtn.addEventListener('click', (event) => {
-  event.preventDefault();
-  const SEARCH_DETAIL_PAGE = 'SEARCH-DETAIL'
-  history.pushState(null, null, `/${SEARCH_DETAIL_PAGE.toLowerCase()}`)
-  headerText.innerText = SEARCH_DETAIL_PAGE;
-  pageTransition(SEARCH_DETAIL_PAGE.toLowerCase());
-})
+// nextBtn.addEventListener('click', (event) => {
+//   event.preventDefault();
+//   const SEARCH_DETAIL_PAGE = 'SEARCH-DETAIL'
+//   history.pushState(null, null, `/${SEARCH_DETAIL_PAGE.toLowerCase()}`)
+//   pageTransition(SEARCH_DETAIL_PAGE.toLowerCase());
+// })
 
 
-goBackBtn.addEventListener('click', (event) => {
-  event.preventDefault();
-  const SEARCH_DETAIL_PAGE = 'SEARCH'
-  history.pushState(null, null, `/${SEARCH_DETAIL_PAGE.toLowerCase()}`)
-  headerText.innerText = SEARCH_DETAIL_PAGE;
-  pageTransition(SEARCH_DETAIL_PAGE.toLowerCase());
-})
+// goBackBtn.addEventListener('click', (event) => {
+//   event.preventDefault();
+//   const SEARCH_DETAIL_PAGE = 'SEARCH'
+//   history.pushState(null, null, `/${SEARCH_DETAIL_PAGE.toLowerCase()}`)
+//   pageTransition(SEARCH_DETAIL_PAGE.toLowerCase());
+// })
 
-searchStartBtn.addEventListener('click', (event) => {
-  event.preventDefault();
-  const SEARCH_DETAIL_PAGE = 'RECIPES'
-  history.pushState(null, null, `/${SEARCH_DETAIL_PAGE.toLowerCase()}`)
-  headerText.innerText = SEARCH_DETAIL_PAGE;
-  pageTransition(SEARCH_DETAIL_PAGE.toLowerCase());
-})
+// searchStartBtn.addEventListener('click', (event) => {
+//   event.preventDefault();
+//   const SEARCH_DETAIL_PAGE = 'RECIPES'
+//   history.pushState(null, null, `/${SEARCH_DETAIL_PAGE.toLowerCase()}`)
+//   pageTransition(SEARCH_DETAIL_PAGE.toLowerCase());
+// })
 
 // SEARCH 2 INPUTS
 const timeRangeInput = document.querySelector('#search-detail .time-range-input');
@@ -66,26 +63,25 @@ timeRangeInput.addEventListener('input', (event) => {
 const pages = document.getElementsByClassName('page');
 
 // Routing
-// window.onhashchange = () => {
-//   const page = window.location.hash.substr(1);
-//   headerText.innerText = page;
-//   if (page === '') {
-//     pageTransition('recipes')
-//   } else {
-//     pageTransition(page)
-//   }
-// }
-
-sidebarItems.addEventListener('click', (event) => {
-  event.preventDefault();
-  let page;
-  if (event.currentTarget.innerText !== event.target.innerText) {
-    page = event.target.innerText
-    history.pushState(null, null, `/${page.toLowerCase()}`)
-    headerText.innerText = page;
-    pageTransition(page.toLowerCase());
+window.onhashchange = () => {
+  const page = window.location.hash.substr(1);
+  if (page === '') {
+    pageTransition('recipes')
+  } else {
+    pageTransition(page)
   }
-})
+}
+
+// sidebarItems.addEventListener('click', (event) => {
+//   event.preventDefault();
+//   let page;
+//   if (event.currentTarget.innerText !== event.target.innerText) {
+//     page = event.target.innerText
+//     history.pushState(null, null, `/${page.toLowerCase()}`)
+//     headerText.innerText = page;
+//     pageTransition(page.toLowerCase());
+//   }
+// })
 
 // 리다이렉팅 문제...
 
